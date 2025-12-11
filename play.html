@@ -10,16 +10,8 @@
 function launch() {
     let url = "https://jamesonodnnll.github.io/JamesonsGeometryDash/";
 
-    // Open about:blank from a trusted user click
-    let win = window.open("about:blank", "_blank");
-
-    if (!win) {
-        alert("Popup blocked! Please allow popups for this site.");
-        return;
-    }
-
-    // Write cloaked page
-    win.document.write(`
+    // Replace the current tab with the cloaked page
+    document.write(`
         <html>
         <head>
             <title>Google Drive</title>
@@ -30,10 +22,7 @@ function launch() {
         </body>
         </html>
     `);
-    win.document.close();
-
-    // Close the launcher tab
-    window.close();
+    document.close();
 }
 </script>
 </body>
